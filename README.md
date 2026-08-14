@@ -17,6 +17,6 @@ The back-end project is focused on creating a server for the WTWR application. Y
 
 `npm run dev` — to launch the server with the hot reload feature
 
-### Testing
+## Project Pitch Video
 
-Before committing your code, make sure you edit the file `sprint.txt` in the root folder. The file `sprint.txt` should contain the number of the sprint you're currently working on. For ex. 12
+[Watch my project pitch video on Loom](PASTE_YOUR_LOOM_LINK_HERE)
