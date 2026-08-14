@@ -1,5 +1,10 @@
 const ClothingItem = require("../models/clothingItems");
-const { BAD_REQUEST, NOT_FOUND, SERVER_ERROR } = require("../utils/errors");
+const {
+  BAD_REQUEST,
+  FORBIDDEN,
+  NOT_FOUND,
+  SERVER_ERROR,
+} = require("../utils/errors");
 
 const handleItemRequestError = (err, res) => {
   console.error(err);
@@ -45,10 +50,20 @@ const createItem = (req, res) => {
 const deleteItem = (req, res) => {
   const { itemId } = req.params;
 
-  ClothingItem.findByIdAndDelete(itemId)
+  ClothingItem.findById(itemId)
     .orFail()
-    .then((item) => res.status(200).send(item))
+    .then((item) => {
+      if (!item.owner.equals(req.user._id)) {
+        return res.status(FORBIDDEN).send({
+          message: "You do not have permission to delete this item.",
+        });
+      }
+
+      return item.deleteOne().then(() => res.status(200).send(item));
+    })
     .catch((err) => handleItemRequestError(err, res));
+
+  return undefined;
 };
 
 const likeItem = (req, res) => {
@@ -57,7 +72,7 @@ const likeItem = (req, res) => {
   ClothingItem.findByIdAndUpdate(
     itemId,
     { $addToSet: { likes: req.user._id } },
-    { new: true },
+    { new: true }
   )
     .orFail()
     .then((item) => res.status(200).send(item))
@@ -70,7 +85,7 @@ const dislikeItem = (req, res) => {
   ClothingItem.findByIdAndUpdate(
     itemId,
     { $pull: { likes: req.user._id } },
-    { new: true },
+    { new: true }
   )
     .orFail()
     .then((item) => res.status(200).send(item))
