@@ -19,4 +19,4 @@ The back-end project is focused on creating a server for the WTWR application. Y
 
 ## Project Pitch Video
 
-[Watch my project pitch video on Loom](PASTE_YOUR_LOOM_LINK_HERE)
+[Watch my project pitch video on Loom](https://www.loom.com/share/7e54f8142158449c93479fbfbac4b978)
