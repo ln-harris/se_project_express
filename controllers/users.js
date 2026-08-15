@@ -100,15 +100,31 @@ const login = (req, res) => {
 
       res.send({ token });
     })
-    .catch(() =>
-      res.status(UNAUTHORIZED).send({ message: "Incorrect email or password" })
-    );
+    .catch((err) => {
+      if (err.message === "Incorrect email or password") {
+        return res
+          .status(UNAUTHORIZED)
+          .send({ message: "Incorrect email or password" });
+      }
+
+      console.error(err);
+
+      return res.status(SERVER_ERROR).send({
+        message: "An error has occurred on the server.",
+      });
+    });
 };
 
 const createUser = (req, res) => {
   const { name, avatar, email, password } = req.body;
 
-  bcrypt
+  if (!email || !password) {
+    return res.status(BAD_REQUEST).send({
+      message: "Email and password are required.",
+    });
+  }
+
+  return bcrypt
     .hash(password, 10)
     .then((hash) =>
       User.create({
