@@ -19,4 +19,6 @@ The back-end project is focused on creating a server for the WTWR application. Y
 
 ## Project Pitch Video
 
+🚨Note for instructor: I recorded this 10 times with my face cam on and showing but for some reason it disappears in the recorded video.
+
 [Watch my project pitch video on Loom](https://www.loom.com/share/7e54f8142158449c93479fbfbac4b978)
