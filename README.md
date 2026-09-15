@@ -2,14 +2,42 @@
 
 The back-end project is focused on creating a server for the WTWR application. You’ll gain a deeper understanding of how to work with databases, set up security and testing, and deploy web applications on a remote machine. The eventual goal is to create a server with an API and user authorization.
 
-## Technologies and Techniques
+## Tech Stack
 
-- Express.js for routing and server setup
-- MongoDB with Mongoose for data modeling and database access
-- REST API route structure for users and clothing items
-- Validator for request data validation
-- ESLint with the Airbnb base style guide and Prettier for code quality and formatting
-- Nodemon for local development with automatic server restarts
+### Backend and Database
+
+- Node.js
+- Express.js
+- REST API
+- MongoDB
+- Mongoose
+
+### Authentication and Security
+
+- JSON Web Tokens (JWT)
+- bcrypt
+- Celebrate
+- Joi
+- Validator
+- dotenv
+- HTTPS with Certbot
+
+### Deployment and Infrastructure
+
+- Google Cloud
+- Ubuntu Linux
+- NGINX
+- PM2
+- FreeDNS
+
+### Development Tools
+
+- Git
+- GitHub
+- Postman
+- ESLint
+- Prettier
+- Nodemon
 
 ## Running the Project
 
