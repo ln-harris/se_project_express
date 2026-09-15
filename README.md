@@ -17,8 +17,11 @@ The back-end project is focused on creating a server for the WTWR application. Y
 
 `npm run dev` — to launch the server with the hot reload feature
 
+## Deployed Application
+
+- Domain: https://linwtwr.crabdance.com
+- Frontend repository: https://github.com/ln-harris/se_project_react
+
 ## Project Pitch Video
 
-🚨Note for instructor: I recorded this 10 times with my face cam on and showing but for some reason it disappears in the recorded video.
-
-[Watch my project pitch video on Loom](https://www.loom.com/share/7e54f8142158449c93479fbfbac4b978)
+[Watch my project pitch](https://www.loom.com/share/7e54f8142158449c93479fbfbac4b978)
