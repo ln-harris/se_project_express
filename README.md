@@ -50,6 +50,10 @@ The back-end project is focused on creating a server for the WTWR application. Y
 - Domain: https://linwtwr.crabdance.com
 - Frontend repository: https://github.com/ln-harris/se_project_react
 
-## Project Pitch Video
+## Project Pitch Videos
 
-[Watch my project pitch](https://www.loom.com/share/7e54f8142158449c93479fbfbac4b978)
+Check out these videos, where I describe my project
+and some challenges I faced while building it:
+
+- [First Video Title](https://www.loom.com/share/7e54f8142158449c93479fbfbac4b978)
+- [Second Video Title](https://www.loom.com/share/52576c95d22044099682a10b1f2b8dd2)
