@@ -39,6 +39,13 @@ The back-end project is focused on creating a server for the WTWR application. Y
 - Prettier
 - Nodemon
 
+## Plans for Improvement
+
+- 🔐 Add user authentication and profile management
+- 🖌️ Change color of "close" and "like" button on cards
+- 🚫 Add visible validation messages to every form so users understand why their input is invalid.
+- ❤️ Add a “Liked Items” tab to the profile page where users can view all clothing items they have liked.
+
 ## Running the Project
 
 `npm run start` — to launch the server
