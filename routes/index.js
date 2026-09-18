@@ -9,7 +9,7 @@ const {
   validateUserInfo,
   validateAuthentication,
 } = require("../middlewares/validation");
-const { NOT_FOUND } = require("../utils/errors");
+const NotFoundError = require("../errors/NotFoundError");
 
 router.post("/signin", validateAuthentication, login);
 router.post("/signup", validateUserInfo, createUser);
@@ -20,10 +20,8 @@ router.use(auth);
 router.use("/users", userRouter);
 router.use("/items", clothingItemRouter);
 
-router.use((req, res) => {
-  res.status(NOT_FOUND).send({
-    message: "Requested resource not found",
-  });
+router.use((req, res, next) => {
+  next(new NotFoundError(`Requested resource ${req.originalUrl} not found`));
 });
 
 module.exports = router;
